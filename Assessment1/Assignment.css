@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: white;
+  color: #333;
+}
+
+header h1,header p{
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px 5px;
+}
+
+section {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid black; 
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+h2 {
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: black;
+  margin-top: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+p {
+  line-height: 0;
+}
