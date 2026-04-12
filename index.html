@@ -1,84 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sidharth Jain : Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flicksy — Your vibe, your flicks.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
 
-  <header>
-    <h1>Sidharth Jain</h1>
-    <p>Email: sidharth.jain2024@vitstudent.ac.in</p>
-    <p>Phone Number: 9599327793</p>
+  <!-- ── NOISE OVERLAY ── -->
+  <div class="noise"></div>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-icon">▶</span>
+      <span class="logo-text">Flicksy</span>
+    </div>
+    <p class="tagline">Your vibe, your flicks.</p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
+  <!-- ── HERO / FILTER SECTION ── -->
+  <section class="hero">
+
+    <!-- Ambient spotlight blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-headline">
+        <span class="line-1">Find your</span>
+        <span class="line-2">next obsession.</span>
+      </h1>
+      <p class="hero-sub">Pick a vibe. Pick a language. Let Flicksy do the rest.</p>
+
+      <!-- Filters -->
+      <div class="filter-row">
+
+        <div class="select-wrap">
+          <label for="genreSelect">Genre</label>
+          <div class="select-box">
+            <select id="genreSelect">
+              <option value="all">All Genres</option>
+              <option value="Action">Action</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Romance">Romance</option>
+              <option value="Horror">Horror</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Drama">Drama</option>
+            </select>
+            <span class="arrow">▾</span>
+          </div>
+        </div>
+
+        <div class="select-wrap">
+          <label for="langSelect">Language</label>
+          <div class="select-box">
+            <select id="langSelect">
+              <option value="all">All Languages</option>
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Tamil">Tamil</option>
+              <option value="Telugu">Telugu</option>
+            </select>
+            <span class="arrow">▾</span>
+          </div>
+        </div>
+
+        <button class="recommend-btn" id="recommendBtn">
+          <span class="btn-text">Recommend</span>
+          <span class="btn-icon">→</span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESULTS SECTION ── -->
+  <section class="results-section" id="resultsSection">
+
+    <!-- Loading spinner -->
+    <div class="loader" id="loader">
+      <div class="spinner"></div>
+      <p>Curating your flicks…</p>
+    </div>
+
+    <!-- Result meta -->
+    <div class="results-meta" id="resultsMeta"></div>
+
+    <!-- Movie grid -->
+    <div class="movie-grid" id="movieGrid"></div>
+
+    <!-- No-results state -->
+    <div class="no-results" id="noResults">
+      <div class="no-results-icon">🎬</div>
+      <h3>No flicks found.</h3>
+      <p>Try a different genre or language combo — we promise great stuff exists.</p>
+      <button class="reset-btn" id="resetBtn">Reset Filters</button>
+    </div>
+
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
     <p>
-      A sophomore at VIT Vellore with a strong interest in web development and problem solving.
-      Always curious about improving my skills relevant to the real world.
+      <span class="logo-text small">Flicksy</span> · Your vibe, your flicks. · Data is curated with ❤️
     </p>
-  </section>
+  </footer>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>UG at VIT Vellore (2024 - 2028)</li>
-      <li>Schooling from VSPK International School (2024)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-
-    <h3><u>Technical Skills</u></h3>
-    <ul>
-      <li>Programming: Java, C, C++, Python</li>
-      <li>Web: HTML, CSS, JavaScript</li>
-      <li>Tools: Git, VS Code</li>
-    </ul>
-
-    <h3><u>Core Computer Science Concepts</u></h3>
-    <ul>
-      <li>Object-Oriented Programming (OOPS)</li>
-      <li>Data Structures and Algorithms (DSA)</li>
-    </ul>
-
-    <h3><u>Soft Skills</u></h3>
-    <ul>
-      <li>Communication</li>
-      <li>Teamwork</li>
-      <li>Critical Thinking</li>
-      <li>Analytical Thinking</li>
-      <li>Problem Solving</li>
-    </ul>
-
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <h3>Flicksy - Movie Recommendation Website</h3>
-    <p>
-      Flicksy is a movie recommendation web application that suggests personalized movies 
-      based on user-selected genres and interests. It helps users find content that matches 
-      their mood and vibe.
-    </p>
-
-    <ul>
-      <li>Technologies Used: HTML, CSS, JavaScript</li>
-    </ul>
-
-    <h3>Research Paper</h3>
-    <p>Energies consumption of various households. We improve electricity load forecasting by combining signal decomposition (VMD) with Transformer models.</p>
-
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: sidharth.jain2024@vitstudent.ac.in</p>
-  </section>
-
+  <script src="script.js"></script>
 </body>
 </html>
